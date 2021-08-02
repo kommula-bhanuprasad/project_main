@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>  MINE </title>
+		<link rel = "icon" href = 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNVWNQgWhoW5gIqo2fIucsbhqP2o1UxKqNiQ&usqp=CAU" 
+        type = "image/x-icon">
+	
+	
+	
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+
+	
+	
+	
+	<style>
+			
+			body {
+			margin: 0;
+			font-family: Arial;
+			font-size: 17px;
+			
+			
+}
+
+.ml15 {
+  font-weight: 800;
+  font-size: 3.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  background:red;
+  padding-left:50px;
+  position:relative;
+  margin:0;
+  
+   
+
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+	.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.8em;
+  color: white;
+  background:green;
+  display:inline;
+  padding:15px;
+  top:80px;
+	left:270px;
+	
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+	
+	
+	
+
+
+	
+	.video-container {
+  width: 500px; 
+  height: 500px;;
+  position: relative;
+  left:500px;
+  top : 50px;
+}
+
+.video-container video {
+  min-width: auto;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+     opacity: 0.3;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-container .caption {
+  position: relative;
+  right : 0px;
+  text-align: left;
+  color: #035397;
+  padding-top : 5px;
+       opacity: 1;
+width:auto;
+  font-size:22px;
+  
+}
+	
+	
+	.img1{
+	
+		position:absolute;
+		left:15px;
+bottom : 100px;
+	
+	
+	}
+	
+	
+	.img2{
+	
+		position:relative;
+		float:right;
+		top : 50px;
+		right: 30px;
+	
+	}
+	
+	.ml7 {
+  animation: cssAnimation 0s 7s forwards;
+  visibility: hidden;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+}
+	
+	
+	
+	#btn{
+	position:absolute;
+	top:644px;
+	color:white;
+	font-size : 23px;
+	left:652px;
+	background-color:black;
+	cursor: pointer;animation: cssAnimation 0s 9s forwards;
+  visibility: hidden;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+
+	
+	}
+	
+#btn:hover{
+	background:green;
+	color:orange;
+}
+	</style>
+	
+	
+	</head>
+	
+	<body>
+	
+	<h1 class="ml15" >
+  <span class="word">Journey</span>
+  <span class="word">Started</span>
+</h1>
+	
+	
+<div id="img1" class="img1" style="visibility: hidden">
+	<img src= "img1.jpeg" height ="500px" width="270px">
+</div>
+
+
+
+<script type="text/javascript">
+function img1() {
+  document.getElementById("img1").style.visibility = "visible";
+}
+setTimeout("img1()", 2400);
+</script>
+
+
+
+
+
+<div id = "img2" class="img2" style="visibility: hidden">
+	<img src= "img2.jpg" height ="500px" width="270px">
+
+</div>	
+<script type="text/javascript">
+function img2() {
+  document.getElementById("img2").style.visibility = "visible";
+}
+setTimeout("img2()", 3200);
+</script>
+
+
+<div id = "div1" class="video-container" style="visibility: hidden">
+  <video autoplay muted loop>
+    <source src="lve.mp4" type="video/mp4" />
+  </video>
+  <div class="caption">
+    A <br> Journey <br>between  two<br>  individuals begins    as<br>  strangers...  While moving  <br> ahead in their careers or
+ life they  talk, share thoughts, experiences, happiness, pain  while spending time.  When it comes to us our journey 
+ started in  <b> SICET </b>. I knew we had some time in the initial days, but we never had enough time being together that raised
+ the gap between us. But, that gap between  u and me  brought a new feeling called <b> LOVE  </b>and I strongly believe that 
+ this love is  not out of ur personality or other unrelated qualities, it's purely obtained out of ur <b> character, 
+ behavior,  ur environment, and involvement </b>.And I knew it's hard to believe my Love due to my past activities
+  but do no the real magic of pure <b> love happened towards you, BaBe... </b> </div>
+  </div>
+
+
+<script type="text/javascript">
+function showIt() {
+  document.getElementById("div1").style.visibility = "visible";
+}
+setTimeout("showIt()", 3800);
+</script>
+
+
+<h1  class="ml7" >
+  <span class="text-wrapper">
+    <span class="letters">same as this text hope our relationship grows big and big...</span>
+  </span>
+</h1>
+
+</div>
+
+
+
+
+<a href="page1.html"> <button id="btn" type="button"> once after reading click me </button></a>
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml7',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  
+  
+  anime.timeline({loop: false})
+  .add({
+    targets: '.ml15 .word',
+    scale: [14,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 800,
+    delay: (el, i) => 800 * i
+  }).add({
+    targets: '.ml15',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+	
+	</body>

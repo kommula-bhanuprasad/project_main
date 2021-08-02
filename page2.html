@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>  MINE </title>
+		<link rel = "icon" href = 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNVWNQgWhoW5gIqo2fIucsbhqP2o1UxKqNiQ&usqp=CAU" 
+        type = "image/x-icon">
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+	
+	
+	
+	<style>
+	
+	body{
+	
+margin:0;
+
+background-image : url("mood-1627890566489-8717.jpg");
+background-size : cover;
+color:white;
+	
+	
+	}
+	
+	
+	
+.ml16 {
+  color: orange;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+  
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}	
+	
+	
+	
+	
+	
+	.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+  left: 650px;
+  top:250px;
+  animation: cssAnimation 0s 0.5s forwards;
+  visibility: hidden;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0.3em;
+  right: 0;
+  opacity: 0; 
+}
+
+<style>
+
+
+a {
+  color: hotpink;
+  background:red;
+}
+	</style>
+	
+
+<body>
+
+<h1 class="ml16">So finally what I want to say is </h1>
+
+
+
+
+<h1 class="ml4">
+  <span class="letters letters-1">&nbsp &nbsp &nbsp I</span>
+  <span class="letters letters-2">LOvE</span>
+  <span class="letters letters-3">YoU!!!</span>
+  <span class="letters letters-4">BabE</span>
+</h1>
+
+
+<a href="tel:+918341033324" style="font-size:25px; color : red;  position : relative; left : 650px; ">Call EvoloveX</a>
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letters-1',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-1',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-4',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-4',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 300,
+    delay: 300
+  });
+</script>
+
+
+</body>
